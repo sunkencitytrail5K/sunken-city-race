@@ -81,11 +81,9 @@ color:#2a9d8f;
 
 .hero{
 height:85vh;
-
 background:
 linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)),
-url("images/hero.jpg");
-
+url("hero-background.jpg");
 background-size:cover;
 background-position:center;
 
@@ -100,7 +98,7 @@ padding:40px;
 
 background: rgba(255,255,255,.88);
 
-padding: 35px 55px;
+padding: 5px 55px;
 
 border-radius: 25px;
 
@@ -146,20 +144,6 @@ margin-bottom:5px;
 
 }
 
-
-.hero {
-    width: 100%;
-    height: 600px;
-
-    background-image: url("hero-background.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    position: relative;
-}
-
 .italics{
     color:#2a9d2a;
 }
@@ -188,21 +172,18 @@ margin-bottom:5px;
 }
 
 .button{
-display:inline-block;
+display:block;
+width:fit-content;
+margin:80px auto 10px auto;
 
 padding:16px 34px;
-
 background:#2a9d8f;
-
 color:white;
-
 text-decoration:none;
-
 border-radius:50px;
-
 font-weight:600;
-
 transition:.3s;
+text-align:center;
 }
 
 .button:hover{
@@ -210,7 +191,7 @@ background:#0f4c5c;
 }
 
 section{
-padding:90px 8%;
+padding:80px 8%;
 }
 
 .section-title{
@@ -219,6 +200,7 @@ font-size:3rem;
 color:#0f4c5c;
 text-align:center;
 margin-bottom:50px;
+margin-top:50px
 }
 
 .grid{
@@ -392,6 +374,68 @@ footer p{
 opacity:.9;
 }
 
+@media (max-width: 768px){
+
+    nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-direction:column;
+gap:12px;
+text-align:center;
+}
+
+.hero{
+height:auto;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:2.2rem;
+}
+
+.hero h2{
+font-size:1.2rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.hero-content{
+padding:25px;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.card{
+padding:25px;
+}
+
+.map-banner{
+width:95%;
+height:250px;
+}
+
+.details{
+padding:30px;
+}
+
+.sponsor-box img{
+width:180px;
+height:120px;
+}
+
+}
+
 </style>
 
 </head>
@@ -450,15 +494,15 @@ alt="Sunken City Trail 5K Logo">
 
 </p>
 
+</div>
+
+</section>
+
 <a href="signup.html" class="button">
 
 Register Today - $25
 
 </a>
-
-</div>
-
-</section>
 
 <section>
 
