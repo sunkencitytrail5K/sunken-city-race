@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Race Information | Sunken City Trail 5K</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#ffffff;
+color:#1b1b1b;
+line-height:1.7;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:white;
+padding:18px 8%;
+border-bottom:2px solid #dce8e5;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:55px;
+height:55px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.logo-text{
+font-family:'Playfair Display',serif;
+font-size:1.8rem;
+font-weight:700;
+color:#0f4c5c;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#1b1b1b;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#2a9d8f;
+}
+
+.hero{
+height:55vh;
+
+background:
+linear-gradient(rgba(255,255,255,.45),rgba(255,255,255,.45)),
+url("images/race-info.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:4rem;
+color:#0f4c5c;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-top:15px;
+}
+
+.race-map {
+
+    width: 85%;
+
+    max-width: 1100px;
+
+    margin: 80px auto;
+
+    text-align: center;
+
+}
+
+.race-map h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    color: #163b45;
+
+    margin-bottom: 15px;
+
+}
+
+.race-map p {
+
+    width: 80%;
+
+    margin: 0 auto 30px auto;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #444444;
+
+}
+
+.map-frame {
+
+    border: 5px solid #2a9d8f;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+
+    background-color: white;
+
+}
+
+.map-frame iframe {
+
+    width: 100%;
+
+    height: 650px;
+
+    border: none;
+
+}
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:3rem;
+color:#0f4c5c;
+text-align:center;
+margin-bottom:50px;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:35px;
+}
+
+.info-card{
+background:white;
+
+padding:35px;
+
+border-radius:22px;
+
+box-shadow:0 6px 20px rgba(0,0,0,.08);
+
+border-top:6px solid #2a9d8f;
+}
+
+.info-card h3{
+margin-bottom:15px;
+color:#0f4c5c;
+}
+
+.course-section{
+background:#f6fbfa;
+padding:60px;
+border-radius:25px;
+}
+
+.scenic-images{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:40px;
+}
+
+.scenic-images img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+}
+
+.sponsors{
+  padding:50px 8%;
+  text-align:center;
+}
+
+.sponsor-box{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:25px;
+}
+
+.sponsor-box img{
+  width:250px;
+  height:180px;
+
+  object-fit:contain;   /* prevents cropping */
+
+  border-radius:15px;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
+
+  padding:10px;
+}
+
+footer{
+background:#0f4c5c;
+color:white;
+text-align:center;
+padding:50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+<img src="running-logo.png" alt="Logo">
+
+<div class="logo-text">
+
+Sunken City Trail 5K
+
+</div>
+
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="race-info.html">Race Info</a></li>
+
+<li><a href="signup.html">Signup</a></li>
+
+<li><a href="volunteer.html">Volunteer</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Race Information</h1>
+
+<p>Everything you need to know before race day.</p>
+
+</div>
+
+</section>
+
+<section id="course-map" class="race-map">
+
+    <h2>Official Course Map</h2>
+
+    <p>
+        Familiarize yourself with the Sunken City Trail 5K course before race day.
+        Review the route, key turns, and surrounding scenery to help you prepare
+        for a successful race experience.
+    </p>
+
+    <div class="map-frame">
+
+        <iframe
+        src="https://www.google.com/maps/d/u/0/embed?mid=1h9efqcFMSH9wX4pcElZZoE7UDghuGVU&ehbc=2E312F&noprof=1"
+        loading="lazy"
+        allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+
+Race Day Schedule
+
+</h2>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<h3>Packet Pickup</h3>
+
+<p>8:00 AM at Montour Campground.</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>Race Start</h3>
+
+<p>9:00 AM sharp.</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>Registration Fee</h3>
+
+<p>$25 per participant.</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>Included With Registration</h3>
+
+<p>Race bib, professional timing, and post-race drinks.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="course-section">
+
+<h2 class="section-title">
+
+Course Information
+
+</h2>
+
+<p>
+
+The Sunken City Trail 5K will take runners through scenic trails surrounding Montour Campground. Expect rolling hills, beautiful foothill views, and a challenging but enjoyable course. Some more technical terrain exists with uneven surfaces and bumps. 
+
+</p>
+
+<br>
+
+<p>
+
+ Aid stations will be available throughout the course.
+
+</p>
+
+<br>
+
+<p>
+
+ Awards will be given to the top 3 finishers in each category.
+
+</p>
+
+<br>
+
+<p>
+
+ Proceeds from the race support high school runners pay for the upcoming season and summer runs.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+
+Experience Montour
+
+</h2>
+
+<div class="scenic-images">
+
+<img src="trail1.jpeg" alt="Trail">
+
+<img src="trail2.jpg" alt="Trail">
+
+<img src="trail3.jpg" alt="Trail">
+
+</div>
+
+</section>
+
+<section class="sponsors">
+
+  <h2 class="section-title">
+    Sponsors
+  </h2>
+
+  <div class="sponsor-box">
+
+    <img src="sponsor1.webp" alt="Sponsor 1">
+
+    <img src="sponsor2.png" alt="Sponsor 2">
+
+    <img src="sponsor3.webp" alt="Sponsor 3">
+
+    <img src="sponsor4.jpg" alt="Sponsor 4">
+
+  </div>
+
+</section>
+
+<footer>
+
+<h2>Sunken City Trail 5K</h2>
+
+<p>Montour, Idaho | August 1st</p>
+
+<br>
+
+<p>Run the Trails. Support the Community.</p>
+
+<br>
+
+<p>Hosted by the Emmett High School Running Club</p>
+
+</footer>
+
+</body>
+
+</html>

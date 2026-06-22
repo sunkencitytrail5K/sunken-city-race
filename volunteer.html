@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Volunteer |Sunken City Trail 5K</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#ffffff;
+color:#1b1b1b;
+line-height:1.7;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:white;
+padding:18px 8%;
+border-bottom:2px solid #dce8e5;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:55px;
+height:55px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.logo-text{
+font-family:'Playfair Display',serif;
+font-size:1.8rem;
+font-weight:700;
+color:#0f4c5c;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#1b1b1b;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#2a9d8f;
+}
+
+.hero{
+height:55vh;
+
+background:
+linear-gradient(rgba(255,255,255,.45),rgba(255,255,255,.45)),
+url("images/volunteer.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:4rem;
+color:#0f4c5c;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-top:15px;
+}
+
+section{
+padding:80px 8%;
+}
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:3rem;
+color:#0f4c5c;
+text-align:center;
+margin-bottom:50px;
+}
+
+.hero-image{
+    width:100%;
+    height:100vh;
+    background-image:url("volunteer-home.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+.card{
+background:#f6fbfa;
+
+padding:35px;
+
+border-radius:22px;
+
+box-shadow:0 6px 20px rgba(0,0,0,.08);
+
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+.card ul{
+padding-left:20px;
+}
+
+.card li{
+margin-bottom:10px;
+}
+
+.volunteer-form {
+
+width: 500px;
+
+margin: 60px auto;
+
+padding: 30px;
+
+background: white;
+
+border-radius: 18px;
+
+box-shadow: 0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.volunteer-form h2 {
+
+text-align: center;
+
+margin-bottom: 25px;
+
+}
+
+.volunteer-form label {
+
+display: block;
+
+margin-top: 15px;
+
+font-weight: bold;
+
+}
+
+.volunteer-form input {
+
+width: 100%;
+
+padding: 12px;
+
+margin-top: 8px;
+
+border: 1px solid #ccc;
+
+border-radius: 8px;
+
+box-sizing: border-box;
+
+}
+
+.volunteer-form button {
+
+margin-top: 25px;
+
+width: 100%;
+
+padding: 14px;
+
+border: none;
+
+border-radius: 10px;
+
+background: #2f5d50;
+
+color: white;
+
+font-size: 18px;
+
+cursor: pointer;
+
+}
+
+.volunteer-form button:hover {
+
+background: #21443a;
+
+}
+
+.volunteer-form select {
+
+width: 100%;
+
+padding: 12px;
+
+margin-top: 8px;
+
+border: 1px solid #ccc;
+
+border-radius: 8px;
+
+box-sizing: border-box;
+
+font-size: 16px;
+
+}
+
+#successMessage {
+
+margin-top: 20px;
+
+text-align: center;
+
+font-weight: bold;
+
+}
+
+.volunteer-image{
+
+margin-top:40px;
+
+text-align:center;
+
+}
+
+.volunteer-image img{
+
+width:100%;
+
+max-width:700px;
+
+height:400px;
+
+object-fit:cover;
+
+border-radius:25px;
+
+box-shadow:0 6px 20px rgba(0,0,0,.1);
+
+}
+
+.scenic-images{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.scenic-images img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+}
+
+.sponsors{
+  padding:50px 8%;
+  text-align:center;
+}
+
+.sponsor-box{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:25px;
+}
+
+.sponsor-box img{
+  width:250px;
+  height:180px;
+
+  object-fit:contain;   /* prevents cropping */
+
+  border-radius:15px;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
+
+  padding:10px;
+}
+
+footer{
+
+background:#0f4c5c;
+
+color:white;
+
+text-align:center;
+
+padding:50px;
+
+margin-top:50px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+<img src="running-logo.png" alt="Logo">
+
+<div class="logo-text">
+
+Sunken City Trail 5K
+
+</div>
+
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="race-info.html">Race Info</a></li>
+
+<li><a href="signup.html">Signup</a></li>
+
+<li><a href="volunteer.html">Volunteer</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Volunteer</h1>
+
+<p>Help make race day possible.</p>
+
+</div>
+
+</section>
+
+<div class="hero-image"></div>
+
+<section>
+
+<h2 class="section-title">
+
+Ways To Help
+
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Course Support</h3>
+
+<ul>
+
+<li>Direct runners along the course</li>
+
+<li>Help at aid stations</li>
+
+<li>Monitor trail intersections</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Race Operations</h3>
+
+<ul>
+
+<li>Packet pickup</li>
+
+<li>Check-in table</li>
+
+<li>Finish line assistance</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Post-Race Support</h3>
+
+<ul>
+
+<li>Water distribution</li>
+
+<li>Cleanup crew</li>
+
+<li>Award ceremony setup</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="email-box">
+
+<h2 class="section-title">
+
+Interested In Volunteering?
+
+</h2>
+
+<div class="volunteer-form">
+
+<h2>Volunteer Sign Up</h2>
+
+<form id="volunteerForm">
+
+<label for="name">Name</label>
+
+<input type="text"
+id="name"
+name="name"
+required>
+
+<label for="email">Email</label>
+
+<input type="email"
+id="email"
+name="email"
+required>
+
+<label for="phone">Phone Number</label>
+
+<input type="tel"
+id="phone"
+name="phone"
+required>
+
+<label for="job">Volunteer Preference</label>
+
+<select id="job"
+name="job"
+required>
+
+<option value="">Select an option</option>
+
+<option value="Directing Traffic">
+Directing Traffic and Racers Throughout Course
+</option>
+
+<option value="Aid Station">
+Working at an Aid Station, Starting Line, or Finish Line
+</option>
+
+<option value="Lead Biker">
+Lead Biker/Pacer For Racers
+</option>
+
+</select>
+
+<button type="submit">
+
+Submit
+
+</button>
+
+</form>
+
+<p id="successMessage"></p>
+
+</div>
+
+<script>
+
+document.getElementById("volunteerForm")
+
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+fetch("https://script.google.com/macros/s/AKfycbwK959QXg0iYVPqNWsRec9-iNDMb43lZWb7h72OTRHwsNAZXarlvpfWHiis6cawlhLb/exec", {
+
+method: "POST",
+
+body: new FormData(this)
+
+})
+
+.then(response => response.text())
+
+.then(data => {
+
+document.getElementById("successMessage").innerHTML =
+
+"Thank you for volunteering!";
+
+document.getElementById("volunteerForm").reset();
+
+})
+
+.catch(error => {
+
+document.getElementById("successMessage").innerHTML =
+
+"Something went wrong.";
+
+});
+
+});
+
+</script>
+
+</div>
+
+</section>
+
+<section class="sponsors">
+
+  <h2 class="section-title">
+    Sponsors
+  </h2>
+
+  <div class="sponsor-box">
+
+    <img src="sponsor1.webp" alt="Sponsor 1">
+
+    <img src="sponsor2.png" alt="Sponsor 2">
+
+    <img src="sponsor3.webp" alt="Sponsor 3">
+
+    <img src="sponsor4.jpg" alt="Sponsor 4">
+
+  </div>
+
+</section>
+
+<footer>
+
+<h2>Sunken City Trail 5K</h2>
+
+<p>Montour, Idaho | August 1st</p>
+
+<br>
+
+<p>Run the Trails. Support the Community.</p>
+
+<br>
+
+<p>A Coby Walker Senior Project</p>
+
+<br>
+
+<p>Hosted by the Emmett High School Running Club</p>
+
+</footer>
+
+</body>
+
+</html>
