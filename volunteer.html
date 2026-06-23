@@ -317,10 +317,12 @@ border-radius:20px;
 }
 
 .sponsor-box{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  margin-top:25px;
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:25px;
+flex-wrap:wrap;
+align-items:center;
 }
 
 .sponsor-box img{
@@ -346,6 +348,88 @@ text-align:center;
 padding:50px;
 
 margin-top:50px;
+
+}
+
+@media (max-width:768px){
+
+header{
+padding:12px 5%;
+}
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+nav ul{
+display:flex;
+flex-direction:row;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+text-align:center;
+}
+
+.logo img{
+width:40px;
+height:40px;
+}
+
+.logo-text{
+font-size:1.3rem;
+}
+
+.hero{
+height:auto;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+section{
+padding:60px 5%;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+.hero-image{
+height:45vh;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.volunteer-form{
+width:100%;
+padding:25px;
+}
+
+.volunteer-image img{
+height:250px;
+}
+
+.scenic-images{
+grid-template-columns:1fr;
+}
+
+.sponsor-box img{
+width:180px;
+height:120px;
+}
+
+footer{
+padding:35px 20px;
+}
 
 }
 
