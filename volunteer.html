@@ -614,43 +614,27 @@ Submit
 </div>
 
 <script>
+document.getElementById("volunteerForm").addEventListener("submit", function(e) {
 
-document.getElementById("volunteerForm")
+    e.preventDefault();
 
-.addEventListener("submit", function(e){
-
-e.preventDefault();
-
-fetch("https://script.google.com/macros/s/AKfycbzxZbuAmfbz1AKRneKEvFNV2u3GYr2IYcHcj1lFVR0CO8lN1se76hl4B5qZ8HLnAlqA/exec", {
-
-method: "POST",
-
-body: new FormData(this)
-
-})
-
-.then(response => response.text())
-
-.then(data => {
-
-document.getElementById("successMessage").innerHTML =
-
-"Thank you for volunteering!";
-
-document.getElementById("volunteerForm").reset();
-
-})
-
-.catch(error => {
-
-document.getElementById("successMessage").innerHTML =
-
-"Something went wrong.";
+    fetch("https://script.google.com/macros/s/AKfycbzxZbuAmfbz1AKRneKEvFNV2u3GYr2IYcHcj1lFVR0CO8lN1se76hl4B5qZ8HLnAlqA/exec", {
+        method: "POST",
+        mode: "no-cors",
+        body: new FormData(this)
+    })
+    .then(() => {
+        document.getElementById("successMessage").textContent =
+            "Thank you for volunteering!";
+        document.getElementById("volunteerForm").reset();
+    })
+    .catch(error => {
+        console.error(error);
+        document.getElementById("successMessage").textContent =
+            "Something went wrong.";
+    });
 
 });
-
-});
-
 </script>
 
 </div>
