@@ -614,29 +614,24 @@ Submit
 </div>
 
 <script>
-document.getElementById("volunteerForm").addEventListener("submit", function(e) {
+document.getElementById("VolunteerForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
 
-    e.preventDefault();
+  const formData = new URLSearchParams();
+  formData.append("name", this.name.value);
+  formData.append("email", this.email.value);
+  formData.append("phone", this.age.value);
+  formData.append("job", this.gender.value);
 
-    fetch("https://script.google.com/macros/s/AKfycby83xNOuW76QEOlrAK8Kx318ORNMBX7vbWoz6prPNlMyhfg58Owp6bQFlzKqa9xi3Es/exec", {
-        method: "POST",
-        mode: "no-cors",
-        body: new FormData(this)
-    })
-    .then(() => {
-        document.getElementById("successMessage").textContent =
-            "Thank you for volunteering!";
-        document.getElementById("volunteerForm").reset();
-    })
-    .catch(error => {
-        console.error(error);
-        document.getElementById("successMessage").textContent =
-            "Something went wrong.";
-    });
+  await fetch("https://script.google.com/macros/s/AKfycby83xNOuW76QEOlrAK8Kx318ORNMBX7vbWoz6prPNlMyhfg58Owp6bQFlzKqa9xi3Es/exec", {
+    method: "POST",
+    body: formData
+  });
 
+  alert("You're officially registered!");
+  this.reset();
 });
 </script>
-
 </div>
 
 </section>
